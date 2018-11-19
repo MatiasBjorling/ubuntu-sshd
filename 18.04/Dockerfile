@@ -1,9 +1,9 @@
 FROM       ubuntu:18.04
-MAINTAINER Aleksandar Diklic "https://github.com/rastasheep"
+MAINTAINER Matias Bjørling "https://github.com/matiasbjorling"
 
 RUN apt-get update
 
-RUN apt-get install -y openssh-server
+RUN apt-get install -y openssh-server dig
 RUN mkdir /var/run/sshd
 
 RUN echo 'root:root' |chpasswd
