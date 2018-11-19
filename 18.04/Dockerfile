@@ -3,7 +3,7 @@ MAINTAINER Matias Bjørling "https://github.com/matiasbjorling"
 
 RUN apt-get update
 
-RUN apt-get install -y openssh-server dnsutils iproute2
+RUN apt-get install -y openssh-server dnsutils iproute2 iputils-ping
 RUN mkdir /var/run/sshd
 
 RUN echo 'root:root' |chpasswd
@@ -18,4 +18,4 @@ RUN apt-get clean && \
 
 EXPOSE 30000
 
-CMD    ["/usr/sbin/sshd", "-p 30000 -D"]
+CMD    ["/usr/sbin/sshd", "-D"]
