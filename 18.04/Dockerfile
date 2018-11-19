@@ -1,4 +1,4 @@
-FROM       ubuntu:18.04
+FROM       ubuntu:18.10
 MAINTAINER Matias Bjørling "https://github.com/matiasbjorling"
 
 RUN apt-get update
@@ -18,4 +18,4 @@ RUN apt-get clean && \
 
 EXPOSE 30000
 
-CMD    ["/usr/sbin/sshd", "-4 -p 30000 -D"]
+CMD    ["/usr/sbin/sshd", "-p 30000 -D"]
