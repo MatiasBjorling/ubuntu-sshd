@@ -18,4 +18,4 @@ RUN apt-get clean && \
 
 EXPOSE 30000
 
-CMD    ["/usr/sbin/sshd", "-D"]
+CMD    ["/usr/sbin/sshd", "-4 -p 30000 -D"]
