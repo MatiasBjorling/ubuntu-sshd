@@ -3,7 +3,7 @@ MAINTAINER Matias Bjørling "https://github.com/matiasbjorling"
 
 RUN apt-get update
 
-RUN apt-get install -y openssh-server dig
+RUN apt-get install -y openssh-server dnsutils
 RUN mkdir /var/run/sshd
 
 RUN echo 'root:root' |chpasswd
